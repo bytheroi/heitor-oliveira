@@ -24,6 +24,26 @@
     margin: 0px;
     box-sizing: border-box;
 }
+body{
+    overflow-x: hidden;
+}
+button{
+    margin-top: 20px;
+    width: 350px;
+    padding: 10px;
+    background-color: var(--sixth-color);
+    border: 1px solid var(--second-color);
+    border-radius: 5px;
+    color: var(--third-color);
+    cursor: pointer;
+}
+button:hover{
+    background-color: var(--main-color);
+    border: 1px solid var(--sixth-color);
+    color: var(--fourth-color);
+    transition: all 0.3s;
+    box-shadow: 1px 1px 4px var(--sixth-color);
+}
 
 header{
     background-color: var(--main-color);
@@ -36,6 +56,12 @@ nav{
     align-items: center;
     padding: 1rem;
     position: relative;
+}
+div#logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
 }
 #logo > a >  img{
     max-width: 150px;
@@ -95,12 +121,40 @@ span#burger:hover{
 
 }
 
+/* Seção Hero */
 
-#social > a > img{
-    display: inline;
+#hero{
+    background: url(img/hero-final.jpg) center center/cover no-repeat ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--sixth-color);
+    border-bottom: 1px solid var(--sixth-color);
+    height: 300px;
+    flex-flow: column;
+}
+#hero > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 0px 20px;
+
+}
+
+div#social{
+    display: flex;
+    flex-flow: row;
+    margin-top: 20px;
     gap: 10px;
+
+}
+#social > a > img{
+    background-color: var(--sixth-color);
     width: 35px;
-    border: 1px solid var(--sixth-color);
+    border: 1px solid var(--main-color);
+    padding: 5px;
     border-radius: 10px;
     margin-top: 8px;
 }
@@ -108,39 +162,6 @@ span#burger:hover{
 #social > a > img:hover{
     transform: translate(-1px, -1px);
     transition: all 0.3s;
-}
-
-/* Seção Hero */
-
-#hero{
-    background-color:#191919;
-    display: flex;
-    padding: 20px;
-    height: 300px;
-    flex-flow: row;
-}
-#hero > div#eu{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    width: 60vw;
-
-}
-#hero > div#profile{
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    background-color: var(--main-color);
-
-}
-#hero > div#profile > img{
-    max-width: 200px;
-    width: 100%;
-    border: 1px solid #488286;
-    border-radius: 10px;
-    
 }
 
 h1, h2, p{
@@ -158,10 +179,11 @@ h2{
     font-weight: 400;
     font-size: 21px;
 }
-#hero > p{
+section#hero div p{
+    color: var(--fourth-color);
     margin-top: 10px;
     font-family: var(--font-secundaria);
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 300;
 }
 
@@ -169,35 +191,86 @@ h2{
 
 #servicos{
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    background-color: var(--main-color);
-    padding: 20px;
-}
-#servicos > div.item{
-    display: flex;
-    width: 40vw;
-    padding: 10px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 1px solid var(--sixth-color);
-    border-radius: 5px;
-    margin: 10px;
-} 
-
-#servicos > div > img{
-
-    max-width: 80px;
-    width: 100%;
-    border-radius: 5px;
-    border: 1px solid var(--sixth-color);
-    
+    padding: 40px 20px;
+    background-color: var(--main-color);
+    font-family: var(--font-primaria);
 }
-
+#servicos > div#servicos-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 10px;
+}
+#servicos > div > div.servico{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    padding: 10px;
+    border: 1px solid var(--sixth-color);
+    border-radius: 5px;
+}
+#servicos > div > div.servico img{
+    max-width: 50px;
+}
 #servicos > div h2{
-    font-size: 20px;
+    font-size: 22px;
 }
-#servicos > div p{
+#servicos > div  h3{
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--sixth-color);
+}
+
+section#servicos > div p{
+    color: #C2C2C2;
     font-size: 15px;
+}
+/* Seção Sobre */
+
+section#sobre{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--main-color);
+}
+section#sobre h3{
+    font-family: var(--font-primaria);
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--third-color);
+}
+section#sobre h2{
+    font-family: var(--font-primaria);
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--sixth-color);
+}
+section#sobre div#profile{
+    display: flex;
+    justify-content: center;
+
+}
+section#sobre div#profile > img{
+    max-width: 250px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--sixth-color);
+}
+section#sobre div.texto{
+    font-size: 14px;
+    width: 80vw;
+    margin-top: 15px;
+}
+section#sobre div.texto p{
+    color: var(--fourth-color);
+    padding: 10px;
+    font-family: var(--font-secundaria);
+    margin-bottom: -10px;
 }
