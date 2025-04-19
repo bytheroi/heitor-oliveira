@@ -71,6 +71,38 @@
                 Meu foco é criar soluções práticas, que gerem resultados reais para negócios que querem crescer com a internet.</p></div>    
             <button>Saiba mais sobre mim</button>  
         </section>
+        <section id="portfolio">
+            <h3>Conheça meu</h3>
+            <h2>Portfolio</h2>
+            
+            <div class="carrossel-container">
+              <!-- UMA única carrossel com vários cards dentro -->
+              <div class="carrossel">
+                <div class="card">
+                  <a href="#" target="_blank" rel="external">
+                    <img src="" alt="Projeto 1">
+                    <h3>Projeto 1</h3>
+                  </a>
+                </div>
+                <div class="card">
+                  <a href="#" target="_blank" rel="external">
+                    <img src="" alt="Projeto 2">
+                    <h3>Projeto 2</h3>
+                  </a>
+                </div>
+                <div class="card">
+                  <a href="#" target="_blank" rel="external">
+                    <img src="" alt="Projeto 3">
+                    <h3>Projeto 3</h3>
+                  </a>
+                </div>
+              </div>
+          
+              <!-- Botões fora da carrossel -->
+              <button class="btn-prev">Voltar</button>
+              <button class="btn-next">Avançar</button>
+            </div>          
+        </section>
     <script>
         function clickMenu(){
             if(menu.style.display == "block"){
@@ -79,6 +111,29 @@
                 menu.style.display = "block"
             }
         }
+        const carrossel = document.querySelector(".carrossel");
+  const btnPrev = document.querySelector(".btn-prev");
+  const btnNext = document.querySelector(".btn-next");
+
+  const scrollAmount = 320;
+
+  btnNext.addEventListener("click", () => {
+    const maxScrollLeft = carrossel.scrollWidth - carrossel.clientWidth;
+
+    if (carrossel.scrollLeft >= maxScrollLeft) {
+      carrossel.scrollTo({ left: 0, behavior: "smooth" });
+    } else {
+      carrossel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  });
+
+  btnPrev.addEventListener("click", () => {
+    if (carrossel.scrollLeft <= 0) {
+      carrossel.scrollTo({ left: carrossel.scrollWidth, behavior: "smooth" });
+    } else {
+      carrossel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    }
+  });
     </script>
 </body>
 </html>
