@@ -27,8 +27,9 @@
 body{
     overflow-x: hidden;
 }
-button{
+button.contact{
     margin-top: 20px;
+    margin-bottom: 20px;
     width: 350px;
     padding: 10px;
     background-color: var(--sixth-color);
@@ -37,7 +38,7 @@ button{
     color: var(--third-color);
     cursor: pointer;
 }
-button:hover{
+button.contact:hover{
     background-color: var(--main-color);
     border: 1px solid var(--sixth-color);
     color: var(--fourth-color);
@@ -298,8 +299,10 @@ section#sobre div.texto p{
   /* === Carrossel Container === */
   .carrossel-container {
     position: relative;
+    max-width: 1000px;
+    width: 100%;
     overflow: hidden;
-    margin-top: 20px;
+    margin: 0 auto;
   }
   
   /* === Carrossel (linha dos cards) === */
@@ -346,14 +349,18 @@ section#sobre div.texto p{
   /* === Botões de Navegação === */
   .btn-prev,
   .btn-next {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: var(--sixth-color);
-    border: none;
-    border-radius: 5px;
-    color: var(--fourth-color);
-    cursor: pointer;
-    font-family: var(--font-secundaria);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(72, 130, 134, 0.427);
+  border: 1px solid var(--sixth-color);
+  color: #c2c2c2c4;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
   }
   
   .btn-prev:hover,
@@ -362,6 +369,15 @@ section#sobre div.texto p{
     border: 1px solid var(--sixth-color);
     transition: 0.3s;
   }
+
+  .btn-prev {
+    left: 1px;
+  }
+  
+  .btn-next {
+    right: -1px;
+  }
+  
 
   
 

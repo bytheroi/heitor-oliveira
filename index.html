@@ -37,6 +37,7 @@
                 <h1>Heitor Oliveira</h1>
                 <h2>Desenvolvedor Web</h2>
                 <p>Desenvolvimento de sites, automação inteligente e estratégias para destacar sua empresa no Google.</p>
+                <button class="contact">Fale comigo agora</button>
             </div>
         </section>
         <section id="servicos">
@@ -61,7 +62,7 @@
                     <p>Desenvolver o projeto, criar o layout e programar as funcionalidades.</p>
                 </div>  
             </div>
-            <button>Fale comigo agora</button>  
+            <button class="contact">Fale comigo agora</button>  
         </section>
         <section id="sobre">
             <h3>Sobre mim</h3>
@@ -69,7 +70,7 @@
             <div id="profile"><img src="img/profile1-1.png" alt="Heitor Oliveira"></div>
             <div class="texto"><p>Obcecado por tecnologias, desde jovem sempre fui movido pela curiosidade de entender como as coisas funcionam — especialmente no mundo digital. Ao longo dos anos, transformei essa paixão em profissão, ajudando empresas a se posicionarem online de forma estratégica, com sites inteligentes, automações que economizam tempo e presença sólida no Google.
                 Meu foco é criar soluções práticas, que gerem resultados reais para negócios que querem crescer com a internet.</p></div>    
-            <button>Saiba mais sobre mim</button>  
+            <button class="contact">Saiba mais sobre mim</button>  
         </section>
         <section id="portfolio">
             <h3>Conheça meu</h3>
@@ -99,9 +100,10 @@
               </div>
           
               <!-- Botões fora da carrossel -->
-              <button class="btn-prev">Voltar</button>
-              <button class="btn-next">Avançar</button>
-            </div>          
+              <button class="btn-prev"> <</button>
+              <button class="btn-next">></button>
+            </div>
+            <button class="contact">Fale comigo agora</button>          
         </section>
     <script>
         function clickMenu(){
@@ -112,28 +114,28 @@
             }
         }
         const carrossel = document.querySelector(".carrossel");
-  const btnPrev = document.querySelector(".btn-prev");
-  const btnNext = document.querySelector(".btn-next");
+        const btnPrev = document.querySelector(".btn-prev");
+        const btnNext = document.querySelector(".btn-next");
 
-  const scrollAmount = 320;
+        const scrollAmount = 320;
 
-  btnNext.addEventListener("click", () => {
-    const maxScrollLeft = carrossel.scrollWidth - carrossel.clientWidth;
+        btnNext.addEventListener("click", () => {
+          const maxScrollLeft = carrossel.scrollWidth - carrossel.clientWidth;
 
-    if (carrossel.scrollLeft >= maxScrollLeft) {
-      carrossel.scrollTo({ left: 0, behavior: "smooth" });
-    } else {
-      carrossel.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    }
-  });
+          if (carrossel.scrollLeft >= maxScrollLeft) {
+            carrossel.scrollTo({ left: 0, behavior: "smooth" });
+          } else {
+            carrossel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+          }
+        });
 
-  btnPrev.addEventListener("click", () => {
-    if (carrossel.scrollLeft <= 0) {
-      carrossel.scrollTo({ left: carrossel.scrollWidth, behavior: "smooth" });
-    } else {
-      carrossel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-    }
-  });
+        btnPrev.addEventListener("click", () => {
+          if (carrossel.scrollLeft <= 0) {
+            carrossel.scrollTo({ left: carrossel.scrollWidth, behavior: "smooth" });
+          } else {
+            carrossel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+          }
+        });
     </script>
 </body>
 </html>
