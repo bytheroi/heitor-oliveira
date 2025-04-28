@@ -377,10 +377,37 @@ section#sobre div.texto p{
   .btn-next {
     right: -1px;
   }
-  
 
-  
+  /* Seção contato */
 
+section#contato{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--main-color);
+}
+
+section#contato h3{
+    font-family: var(--font-primaria);
+    color: var(--third-color);
+}
+
+section#contato h2{
+    font-family: var(--font-primaria);
+    color: var(--sixth-color);
+    font-size: 25px;
+    font-weight: 500;
+}
+section#contato > form{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    margin-top: 20px;
+}    
 
 
 
