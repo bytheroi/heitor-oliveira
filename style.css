@@ -29,7 +29,7 @@ body{
 }
 button.contact{
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     width: 350px;
     padding: 10px;
     background-color: var(--sixth-color);
@@ -202,7 +202,7 @@ section#hero div p{
 #servicos > div#servicos-container{
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 10px;
 }
 #servicos > div > div.servico{
@@ -222,7 +222,7 @@ section#hero div p{
     font-size: 22px;
 }
 #servicos > div  h3{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     color: var(--sixth-color);
 }
